@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: space('md') space('lg');
+  @include surface(space('xl'));
+
+  &__group {
+    @include flex(column, $gap: space('xxs'));
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  &__control {
+    width: 100%;
+    padding: space('xs') space('sm');
+    font: inherit;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+
+    &--color {
+      height: 2.6rem;
+      padding: space('xxs');
+    }
+  }
+
+  &__submit {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  @include respond-below('md') {
+    grid-template-columns: 1fr;
+  }
+}
+
+textarea.form__control {
+  resize: vertical;
+}

@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.profile-card {
+  @include surface(space('lg'));
+  align-self: start;
+  position: sticky;
+  top: $header-offset;
+
+  &__title {
+    margin: 0 0 space('sm');
+    font-size: 1.1rem;
+  }
+
+  &__list {
+    @include flex(column, $gap: space('sm'));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+
+  @include respond-below('md') {
+    position: static;
+  }
+}

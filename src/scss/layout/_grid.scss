@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.page {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  gap: var(--gap);
+  max-width: $container-max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 var(--gap);
+
+  // Menetapkan grid-area untuk tiap region
+  @each $area in (header, aside, main, footer) {
+    &__#{$area} {
+      grid-area: $area;
+    }
+  }
+
+  &__main {
+    min-width: 0;
+  }
+
+  @include respond-below('md') {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+  }
+}

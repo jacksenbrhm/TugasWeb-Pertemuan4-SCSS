@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// space(md) -> 1rem
+@function space($key) {
+  @if not map.has-key($spacing, $key) {
+    @error "Spacing '#{$key}' tidak ada. Pilihan: #{map.keys($spacing)}";
+  }
+  @return map.get($spacing, $key);
+}

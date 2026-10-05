@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+@include dark-mode {
+  :root {
+    @include tokens($dark-theme);
+  }
+}

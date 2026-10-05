@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+:root {
+  @include tokens($base-tokens);
+  @include tokens($light-theme);
+}

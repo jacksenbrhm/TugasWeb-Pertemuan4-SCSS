@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.btn {
+  padding: space('sm') space('xl');
+  font: inherit;
+  font-weight: 600;
+  color: var(--color-primary-contrast);
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 0.88;
+  }
+}

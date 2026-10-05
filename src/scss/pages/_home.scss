@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.section {
+  padding-block: space('xxl');
+  scroll-margin-top: $header-offset;
+
+  &__title {
+    margin: 0 0 space('xxs');
+    font-size: 1.75rem;
+    color: var(--color-primary);
+  }
+
+  &__desc {
+    margin: 0 0 space('xl');
+    color: var(--color-muted);
+  }
+}
+
+.hero {
+  padding-top: space('md');
+
+  &__title {
+    margin: 0 0 space('md');
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.15;
+  }
+
+  &__text {
+    max-width: 65ch;
+    margin: 0;
+    color: var(--color-muted);
+  }
+}

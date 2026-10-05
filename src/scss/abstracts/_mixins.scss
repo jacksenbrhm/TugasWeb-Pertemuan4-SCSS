@@ -1,0 +1,56 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// 1. Flexbox shortcut (properti bernilai null otomatis tidak dicetak)
+@mixin flex($direction: null, $gap: null, $justify: null, $align: null, $wrap: null) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// 2. Permukaan kartu (surface)
+@mixin surface($padding: null) {
+  padding: $padding;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+// 3. Responsive: max-width berdasarkan map $breakpoints
+@mixin respond-below($key) {
+  @media (max-width: map.get($breakpoints, $key)) {
+    @content;
+  }
+}
+
+// 4. Dark mode
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// 5. Hover + focus
+@mixin hover-focus {
+  &:hover,
+  &:focus-visible {
+    @content;
+  }
+}
+
+// 6. Focus ring
+@mixin focus-ring {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+// 7. Cetak map menjadi CSS custom properties (@each)
+@mixin tokens($map) {
+  @each $name, $value in $map {
+    --#{$name}: #{$value};
+  }
+}

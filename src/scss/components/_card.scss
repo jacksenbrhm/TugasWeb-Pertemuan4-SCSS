@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($card-min-width, 1fr));
+  gap: var(--gap);
+}
+
+.card {
+  @include flex(column, $gap: space('sm'));
+  @include surface(space('md'));
+
+  &__figure {
+    margin: 0;
+    order: -1; // gambar selalu paling atas
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  &__caption {
+    margin-top: space('xs');
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+
+  &__date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--color-muted);
+    flex-grow: 1;
+  }
+}

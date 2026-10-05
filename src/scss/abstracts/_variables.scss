@@ -1,0 +1,68 @@
+// ==========================================================
+// VARIABLES: breakpoints, spacing, colors
+// ==========================================================
+
+// ---- Layout ----
+$breakpoints: ('md': 768px);
+$container-max-width: 1200px;
+$header-offset: 5rem;
+$card-min-width: 260px;
+
+// ---- Spacing scale ----
+$spacing: (
+  'xxs': 0.25rem,
+  'xs': 0.5rem,
+  'sm': 0.75rem,
+  'md': 1rem,
+  'lg': 1.25rem,
+  'xl': 1.5rem,
+  'xxl': 2rem
+);
+
+// ---- Colors: light palette ----
+$light-bg: #f5f4fb;
+$light-surface: #ffffff;
+$light-text: #1f1d36;
+$light-muted: #5e5b7a;
+$light-primary: #3b3486;
+$light-primary-contrast: #ffffff;
+$light-border: #dcd9ee;
+
+// ---- Colors: dark palette ----
+$dark-bg: #12111c;
+$dark-surface: #1c1b2b;
+$dark-text: #ecebf7;
+$dark-muted: #a9a6c4;
+$dark-primary: #a59cff;
+$dark-primary-contrast: #12111c;
+$dark-border: #34324d;
+
+// ---- Token maps (dipakai @each untuk membuat CSS custom properties) ----
+$base-tokens: (
+  'font-base': ("Segoe UI", system-ui, -apple-system, sans-serif),
+  'radius': 12px,
+  'gap': 1.5rem,
+  'sidebar-width': 260px
+);
+
+$light-theme: (
+  'color-bg': $light-bg,
+  'color-surface': $light-surface,
+  'color-text': $light-text,
+  'color-muted': $light-muted,
+  'color-primary': $light-primary,
+  'color-primary-contrast': $light-primary-contrast,
+  'color-border': $light-border,
+  'shadow': (0 2px 10px rgb(0 0 0 / 0.06))
+);
+
+$dark-theme: (
+  'color-bg': $dark-bg,
+  'color-surface': $dark-surface,
+  'color-text': $dark-text,
+  'color-muted': $dark-muted,
+  'color-primary': $dark-primary,
+  'color-primary-contrast': $dark-primary-contrast,
+  'color-border': $dark-border,
+  'shadow': (0 2px 10px rgb(0 0 0 / 0.4))
+);

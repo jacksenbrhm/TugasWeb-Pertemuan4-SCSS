@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey, Get to Know Samuel</title>
+  <meta name="description" content="Landing page pribadi berisi perkenalan diri, minat, pengalaman, dan cara menghubungi saya.">
+  <meta property="og:title" content="Hey, Get to Know Me">
+  <meta property="og:description" content="Landing page pribadi: minat, pengalaman, dan kontak saya.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+</head>
+<body class="page">
+
+  <!-- HEADER + NAV -->
+  <header class="page__header site-header">
+    <a class="site-header__brand" href="#hero">Samuel Jacksen Brahmana</a>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" href="#interest">Interest</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#pengalaman">Pengalaman</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ASIDE -->
+  <aside class="page__aside profile-card">
+    <h2 class="profile-card__title">Fakta singkat</h2>
+    <ul class="profile-card__list">
+      <li class="profile-card__item"><span class="profile-card__label">Status</span> Mahasiswa Ilmu Komputer</li>
+      <li class="profile-card__item"><span class="profile-card__label">Domisili</span> Medan</li>
+      <li class="profile-card__item"><span class="profile-card__label">Asal</span> Kabanjahe</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="page__main">
+
+    <section class="section hero" id="hero">
+      <h1 class="hero__title">Hey, get to know me</h1>
+      <p class="hero__text">
+        Halo perkenalkan Saya Samuel Jacksen Brahmana. Saya mahasiswa yang sedang belajar pemrograman web. Halaman ini adalah tugas rutin pertama saya yang berisi perkenalan diri, minat, pengalaman, dan cara menghubungi saya. Dibuat dengan HTML5 semantik.
+      </p>
+    </section>
+
+    <section class="section" id="interest">
+      <h2 class="section__title">Interest</h2>
+      <p class="section__desc">Beberapa hal yang saya sukai dan sedang saya dalami akhir-akhir ini.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <figure class="card__figure">
+            <img class="card__img" src="/images/sketch_1.jpeg" alt="Karya sketsa yang merupakan hobi Saya">
+            <figcaption class="card__caption">Sketch &amp; Art</figcaption>
+          </figure>
+          <h3 class="card__title">Menggambar</h3>
+          <p class="card__text">Saya hobi menggambar sketsa.</p>
+        </article>
+
+        <article class="card">
+          <figure class="card__figure">
+            <img class="card__img" src="/images/ss2.png" alt="Desain yang pernah saya buat">
+            <figcaption class="card__caption">Desain yang pernah saya buat</figcaption>
+          </figure>
+          <h3 class="card__title">Mendesain</h3>
+          <p class="card__text">Saya suka membuat desain grafis dengan menggunakan software seperti Canva, Figma, dan Capcut.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="pengalaman">
+      <h2 class="section__title">Pengalaman</h2>
+      <p class="section__desc">Perjalanan singkat saya sejauh ini.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <time class="card__date" datetime="2026-07">Juli - Agustus 2026</time>
+          <h3 class="card__title">Mendesain feed PKKMB matematika 2026</h3>
+          <figure class="card__figure">
+            <img class="card__img" src="/images/ss1.png" alt="Desain yang saya kerjakan akhir-akhir ini">
+            <figcaption class="card__caption">Desain yang telah saya kerjakan akhir-akhir ini</figcaption>
+          </figure>
+          <p class="card__text">Desain feed yang saya buat untuk event PKKMB Matematika 2026</p>
+        </article>
+
+        <article class="card">
+          <time class="card__date" datetime="2026-08">Agustus 2026</time>
+          <h3 class="card__title">Mengikuti lomba konten video edukasi</h3>
+          <figure class="card__figure">
+            <img class="card__img" src="/images/HTTS-2026.png" alt="Salah satu lomba yang pernah saya ikuti">
+            <figcaption class="card__caption">Sertifikat berpartisipasi dalam lomba HTTS 2026</figcaption>
+          </figure>
+          <p class="card__text">Berpartisipasi dalam lomba video edukasi kreatif dalam rangka memperingati hari tanpa tembakau sedunia 2026</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="kontak">
+      <h2 class="section__title">Kontak</h2>
+      <p class="section__desc">Punya pertanyaan atau ada project desain yang bisa saya kerjakan? Isi form di bawah ini.</p>
+
+      <form class="form" action="#" method="post">
+        <div class="form__group">
+          <label class="form__label" for="nama">Nama lengkap</label>
+          <input class="form__control" type="text" id="nama" name="nama" required minlength="3" placeholder="Nama Anda">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__control" type="email" id="email" name="email" required placeholder="nama@email.com">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="deadline">Deadline</label>
+          <input class="form__control" type="date" id="deadline" name="deadline">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="warna">Warna Projek</label>
+          <input class="form__control form__control--color" type="color" id="warna" name="warna" value="#3b3486">
+        </div>
+
+        <div class="form__group form__group--full">
+          <label class="form__label" for="kesulitan">Tingkat kesulitan projek (1–10)</label>
+          <input class="form__control" type="range" id="kesulitan" name="kesulitan" min="1" max="10" value="8">
+        </div>
+
+        <div class="form__group form__group--full">
+          <label class="form__label" for="pesan">Pesan</label>
+          <textarea class="form__control" id="pesan" name="pesan" rows="5" required minlength="10" placeholder="Tulis pesan Anda di sini..."></textarea>
+        </div>
+
+        <button class="btn form__submit" type="submit">Kirim pesan</button>
+      </form>
+
+      <ul class="social-links">
+        <li><a class="social-links__link" href="mailto:samueljacksen63@email.com">Email</a></li>
+        <li><a class="social-links__link" href="https://www.instagram.com/samuelbrhm/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="page__footer site-footer">
+    <p class="site-footer__text">&copy; 2026 Samuel Jacksen Brahmana. Dibuat untuk Tugas Rutin 1 Pemrograman Web, UNIMED.</p>
+  </footer>
+
+</body>
+</html>
